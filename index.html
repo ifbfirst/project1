@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Турагенство</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body class="start" id="top">
+	<header>
+		<div class="logo" id="b"><img src="images/logo.png" alt="лого"></div>
+		<div class="tm">
+			<span><i class="material-icons">access_time</i></span>
+			<span>9:00 - 18:00</span>
+		</div>
+		<div class="tel">
+			<span><i class="material-icons">phone</i></span>
+			<span>+375 (29) 2929299</span>
+		</div>
+		<div class="srh">
+			<form action="#">
+				<input type="search" name="n6" id="i6" list="mydata" autocomplete="off" placeholder="Поиск">
+				<datalist id="mydata">
+					<option value="Испания" label="Канарские острова">
+					<option value="Турция" label="Анталия">
+					<option value="Египет" label="Хургада">
+
+				</datalist>
+				<button><i class="material-icons">
+						search
+					</i></button>
+			</form>
+		</div>
+	</header>
+	<nav>
+		<div>
+			<a href="#a1">О компании</a></div>
+		<div> <a href="#a2">Наши туры</a></div>
+		<div> <a href="#a3">Горящие путевки</a></div>
+		<div> <a href="#a4">Контакты</a></div>
+	</nav>
+	<main>
+		<section>
+			<video id="intro" preload="auto" width="100%">
+				<source src="media/anytour.mp4" type="video/mp4">
+				<source src="media/anytour.webm" type="video/mp4">
+				<source src="media/anytour.ogv" type="video/ogg">
+				<p>Браузер не поддерживает видео <a href="">Скачать видео</a></p>
+			</video>
+		</section>
+		<script>
+			intro.muted = true;
+			intro.addEventListener('click', push);
+
+			function push() {
+				if (!intro.paused && !intro.ended) intro.pause();
+				else intro.play();
+			}
+
+		</script>
+		<!--    О компании-->
+
+		<h1 id="a1">О компании</h1>
+
+		<section class="about">
+
+
+			<figure><img id="p1" class="fade" src="images/img1b.jpg"></figure>
+
+			<script>
+				let i = 1;
+				let p = 7;
+				setTimeout('func();', 4000)
+
+				function func() {
+					if (++i > p) i = 1;
+					p1.style.opasity = '0'
+					setTimeout('pic()', 1000)
+					pic = () => {
+						p1.src = `images/img${i}b.jpg`;
+						p1.style.opacity = '1';
+					}
+					setTimeout('func();', 4000)
+				}
+
+			</script>
+
+			<div>
+				<h2>Откройте новые горизонты</h2>
+
+				<ul>
+					<li id="li1" onclick="openText('li1')" class="colorOn">О компании</li>
+					<li id="li2" onclick="openText('li2')">Почему выбирают нас</li>
+					<li id="li3" onclick="openText('li3')">Наша миссия</li>
+				</ul>
+				<div id="aboutUs">
+					Нас искренне рекомендуют как постоянные, так и новые клиенты, которые неизменно остаются довольны качеством сервиса и широким разнообразием услуг, предложенных в нашем портфолио.Нас искренне рекомендуют как постоянные, так и новые клиенты, которые неизменно остаются довольны качеством сервиса и широким разнообразием услуг, предложенных в нашем портфолио. </div>
+				<a href="#a5">Наша команда</a>
+			</div>
+		</section>
+		<script>
+			function openText(id) {
+
+				switch (id) {
+					case 'li1':
+						aboutUs.innerHTML = 'Нас искренне рекомендуют как постоянные, так и новые клиенты, которые неизменно остаются довольны качеством сервиса и широким разнообразием услуг, предложенных в нашем портфолио.Нас искренне рекомендуют как постоянные, так и новые клиенты, которые неизменно остаются довольны качеством сервиса и широким разнообразием услуг, предложенных в нашем портфолио. '
+						li1.setAttribute('class', 'colorOn');
+						li2.setAttribute('class', 'colorOff');
+						li3.setAttribute('class', 'colorOff');
+						break;
+					case 'li2':
+						aboutUs.innerHTML = 'О достигнутых успехах и завоёванных вершинах свидетельствуют наши дипломы и награды, хотя важнее всего для нас — это добрые слова и положительные отзывы клиентов.О достигнутых успехах и завоёванных вершинах свидетельствуют наши дипломы и награды, хотя важнее всего для нас — это добрые слова и положительные отзывы клиентов. '
+						li2.setAttribute('class', 'colorOn');
+						li1.setAttribute('class', 'colorOff');
+						li3.setAttribute('class', 'colorOff');
+						break;
+					case 'li3':
+						aboutUs.innerHTML = 'На данный момент мы готовы предложить такие услуги, как организация семейного, пляжного, молодёжного, романтического отдыха, подготовка к отпуску на островах, планирование путешествия на уикенд,организация увлекательных и познавательных экскурсионных поездок, автобусных туров и так далее. '
+						li3.setAttribute('class', 'colorOn');
+						li1.setAttribute('class', 'colorOff');
+						li2.setAttribute('class', 'colorOff');
+						break;
+				}
+			}
+
+		</script>
+
+
+		<h1 id="a2">Наши туры</h1>
+
+		<section class="ourTour">
+			<figure><img src="images/trv1.jpg" alt="Франция" id="i1" onclick="imgBig('i1','trv1')">
+				<figcaption>Франция</figcaption>
+			</figure>
+			<figure><img src="images/trv2.jpg" alt="Италия" id="i2" onclick="imgBig('i2','trv2')">
+				<figcaption>Италия</figcaption>
+			</figure>
+			<figure><img src="images/trv3.jpg" alt="Египет" id="i3" onclick="imgBig('i3','trv3')">
+				<figcaption>Египет</figcaption>
+			</figure>
+			<figure><img src="images/trv4.jpg" alt="Дубаи" id="i4" onclick="imgBig('i4','trv4')">
+				<figcaption>Дубаи</figcaption>
+			</figure>
+			<figure><img src="images/trv5.jpg" alt="Испания" id="i5" onclick="imgBig('i5','trv5')">
+				<figcaption>Испания</figcaption>
+			</figure>
+			<figure><img src="images/trv6.jpg" alt="Африка" id="i6" onclick="imgBig('i6','trv6')">
+				<figcaption>Африка</figcaption>
+			</figure>
+			<div id="imgB" onclick="noImg()"></div>
+
+			<script>
+				window.onresize = function(event) {
+
+					s = document.documentElement.clientWidth;
+					newImg.style.width = `${s}px`;
+
+				};
+
+				function imgBig(id, n) {
+					imgB.style.display = 'block';
+					imgB.innerHTML = `<img src="images/${n}.jpg" id="newImg">`;
+s = document.documentElement.clientWidth;
+					newImg.style.width = `${s}px`;
+
+				}
+
+				function noImg() {
+
+					imgB.style.display = 'none';
+
+
+				}
+
+			</script>
+		</section>
+		<h1 id="a3">Горящие туры</h1>
+		<section class="hotTour">
+			<figure><img src="images/htour1.jpg" alt="Испания"></figure>
+			<div>
+				<h3>Бенидорн, Испания</h3>
+				<p><i class="material-icons">star</i> <i class="material-icons">star</i>
+					<i class="material-icons">star</i>
+					<i class="material-icons">star</i>
+					<i class="material-icons">star</i></p>
+				<p>21 отзыв</p>
+				<p>Бенидорм — неожиданный. Еще в середине 20 века не было никакого курорта — обычный городок рыбаков на 2,5 тыс. жителей и небольшой порт. В наши же дни — это город двух огромных пляжей, город ярких огней, небоскребов и ресторанов, отелей и тематических парков. В современном </p>
+				<a href="">Купить за $790</a>
+			</div>
+		</section>
+		<section class="hotTour">
+			<figure><img src="images/htour2.jpg" alt="Франция"></figure>
+			<div>
+				<h3>Остров Маврикий, Африка</h3>
+				<p><i class="material-icons">star</i> <i class="material-icons">star</i>
+					<i class="material-icons">star</i>
+					<i class="material-icons">star</i>
+					<i class="material-icons">star</i></p>
+				<p>21 отзыв</p>
+				<p>Бенидорм — неожиданный. Еще в середине 20 века не было никакого курорта — обычный городок рыбаков на 2,5 тыс. жителей и небольшой порт. В наши же дни — это город двух огромных пляжей, город ярких огней, небоскребов и ресторанов, отелей и тематических парков. В современном </p>
+				<a href="">Купить за $790</a>
+			</div>
+		</section>
+		<h1 id="a5">Наша команда</h1>
+		<section class="ourTeam">
+			<div><img src="images/user1.jpg">
+				<p>Виолетта Маркова</p>
+				<p>СЕО</p>
+				<p>+375295556677</p>
+			</div>
+			<div><img src="images/user2.jpg">
+				<p>Виолетта Маркова</p>
+				<p>СЕО</p>
+				<p>+375295556677</p>
+			</div>
+			<div><img src="images/user3.jpg">
+				<p>Виолетта Маркова</p>
+				<p>СЕО</p>
+				<p>+375295556677</p>
+			</div>
+			<div><img src="images/user4.jpg">
+				<p>Виолетта Маркова</p>
+				<p>СЕО</p>
+				<p>+375295556677</p>
+			</div>
+		</section>
+		<h1 id="a4">Контакт</h1>
+		<section class="contacts">
+			<div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.9356193446465!2d27.574723315300336!3d53.91511993965683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfa2e32536b1%3A0x68a1dd19e7604a9d!2z0YPQuy4g0J_Rg9Cz0LDRh9GR0LLRgdC60LDRjyA2LCDQnNC40L3RgdC6IDIyMDA4OQ!5e0!3m2!1sru!2sby!4v1579175664046!5m2!1sru!2sby" frameborder="0" style="border:0;" allowfullscreen="" width="100%" height="400px"></iframe><img src="images/trvl.png"></div>
+			<h1>Отправить сообщение</h1>
+
+			<form action="1.php">
+				<input type="text" placeholder="Ваше имя">
+				<input type="e-mail" placeholder="E-mail">
+				<input type="tel" placeholder="Телефон">
+				<textarea name="" id="" placeholder="Сообщение"></textarea>
+				<button>Отправить</button>
+			</form>
+
+		</section>
+	</main>
+	<footer>
+
+		<section>
+			<p>Контактная информация
+			</p>
+			<p><i class="material-icons">phone</i>
+				+38 050 050 0505</p>
+			<p><i class="material-icons">email</i>
+				infodemolink@gmail.com</p>
+			<p><i class="material-icons">near_me</i>
+				Минск, пр. Победителей 9</p>
+		</section>
+		<section>
+			<p>Меню сайта</p>
+			<p><a href="#a1">О компании</a></p>
+			<p><a href="#a2">Наши туры</a></p>
+			<p><a href="#a3">Горящие путевки</a></p>
+			<p><a href="#a5">Наша команда</a></p>
+
+
+		</section>
+		<section>
+			<p><a href="#" class="ourTour">Наши туры</a></p>
+			<p>
+				<copyright>@2019 Агенство путешествий</copyright>
+			</p>
+		</section>
+		<div id="up"><i class="material-icons" onclick="upTop()">
+				keyboard_arrow_up</i></div>
+		<script>
+			window.addEventListener('scroll', function upF() {
+				if (window.pageYOffset > 900) {
+					up.style.display = "block"
+				} else {
+					up.style.display = "none"
+				}
+
+			})
+
+			function upTop() {
+				window.scrollTo(0, 0)
+			}
+
+		</script>
+	</footer>
+</body>
+
+</html>
